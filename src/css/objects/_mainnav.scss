@@ -1,0 +1,51 @@
+.main-nav {
+  position: relative;
+  text-align: right;
+  :before {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 5px;
+    background: #000;
+    content: '';
+    cursor: pointer;
+  }
+  @include tablet {
+    :before {
+      width: 0px;
+      height: 0px;
+    }
+  }
+  @include desktop {
+    :before {
+      width: 0px;
+      height: 0px;
+    }
+  }
+}
+
+.main-nav__item {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+  }
+  @include desktop {
+    display: inline-block;
+  }
+  a, a:visited, a:active {
+    color: $grey;
+    text-decoration: none;
+    margin-right: 0.8em;
+  }
+  &:last-of-type {
+    a {
+      margin-right: 0;
+    }
+  }
+}
+
+.main-nav__item--with-icon {
+
+}

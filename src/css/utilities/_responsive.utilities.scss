@@ -1,0 +1,26 @@
+/* show elements based on device */
+
+.hide-on-mobile {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: block;
+  }
+}
+
+.show-on-mobile {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+/* small re usable classes */
+.bold {
+  font-weight: 600;
+}
