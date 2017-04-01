@@ -10,29 +10,29 @@ const loaders = [
         loader: 'sass-loader'
     }
 ];
+// main app dir
+const APP_DIR = path.resolve(__dirname, 'src/js/');
 
-
-module.exports = [/*{
- // JS
- entry: './src/js/app.js',
- output: {
- filename: 'bundle.js',
- path: path.resolve(__dirname, 'dist/js')
- },
- module: {
- rules: [
- {
- test: /\.js$/,
- exclude: /(node_modules|bower_components|dist)/,
- loader: 'babel-loader',
- query: {
- presets: ['es2015']
- }
- }
- ]
- }
- // CSS
- }, */{
+module.exports = [{
+    // JavaScript [React JSX with Babel]
+    entry: './src/js/app.jsx',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist/js'),
+        publicPath: '../../'
+    },
+    module: {
+        loaders: [{
+            test: /\.jsx?/,
+            include: APP_DIR,
+            loader: 'babel-loader'
+        }],
+    },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+    }
+    // CSS [SASS and image, font laoders]
+}, {
     entry: {
         css: './src/css/main.scss'
     },

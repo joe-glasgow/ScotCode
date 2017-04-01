@@ -5,26 +5,37 @@
   "main": "app.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "serve": "webpack-dev-server --progress --colors",
-    "watch": "webpack --progress --colors --watch"
+    "serve": "serve ./",
+    "watch": "webpack --progress --colors --watch",
+    "test": "jest"
   },
   "author": "Joseph Morrison",
   "license": "ISC",
   "dependencies": {
-    "inuitcss": "^6.0.0-beta.4"
+    "inuitcss": "^6.0.0-beta.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-preset-es2015": "^6.22.0",
+    "babel-jest": "^6.0.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
     "file-loader": "^0.11.0",
     "node-sass": "^4.5.0",
     "sass-loader": "^6.0.1",
+    "serve": "^5.1.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "webpack-dev-server": "^2.4.1",
+    "enzyme": "^2.0.0",
+    "jest": "15.1.1",
+    "jest-cli": "15.1.1"
   }
 }

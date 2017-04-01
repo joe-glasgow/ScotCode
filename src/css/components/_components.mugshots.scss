@@ -1,0 +1,21 @@
+.mugshot {
+  background: url("../images/mugshot.png");
+  background-size: cover;
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  @include desktop {
+    width: 180px;
+    height: 180px;
+  }
+  @include tablet {
+    width: 180px;
+    height: 180px;
+  }
+
+}
+
+.mugshot--reflected {
+
+}

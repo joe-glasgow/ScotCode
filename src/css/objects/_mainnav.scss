@@ -27,7 +27,7 @@
 
 .main-nav__item {
   display: none;
-
+  position: relative;
   @include tablet {
     display: inline-block;
   }
@@ -38,6 +38,10 @@
     color: $grey;
     text-decoration: none;
     margin-right: 0.8em;
+    line-height: 1em;
+  }
+  a:hover {
+    text-shadow:0 0 0.08em $grey, 0 0 0.08em $grey, 0 0 0.08em $grey;
   }
   &:last-of-type {
     a {
@@ -47,5 +51,15 @@
 }
 
 .main-nav__item--with-icon {
-
+  padding-left: 28px;
+  position: relative;
+  :before {
+    content: url('../images/Github-Mark-64px.png');
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+  }
 }

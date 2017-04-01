@@ -1,57 +1,44 @@
-<!DOCTYPE>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>header component</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="dist/css/bundle.css">
+    <base href="/" />
+    <title>Document</title>
 </head>
 <body>
-<div class="o-wrapper u-margin-top-small o-wrapper--tiny">
-    <header class="o-layout u-1/1 o-layout--flush">
-        <section class="o-layout__item u-1/2@desktop u-1/2@mobile">
-            <div class="logo logo--small"><!--logo --></div>
-            <div class="o-layout o-layout__item u-1/2 u-3/4@mobile">
-                <span class="u-margin-bottom-none fs-h1"><span class="bold">Scot</span> :code</span>
-                <span class="hide-on-mobile u-margin-bottom-none u-h6"><i>Development from Joe Morrison</i></span>
-            </div>
-        </section>
-        <nav class="o-layout__item main-nav u-1/2@desktop u-1/2@mobile">
-            <ul class="o-list-inline">
-                <li class="o-list-inline__item main-nav__item"><a href="#">Home</a></li>
-                <li class="o-list-inline__item main-nav__item"><a href=#"">About</a></li>
-                <li class="o-list-inline__item main-nav__item"><a href="#">Portfolio</a></li>
-                <li class="o-list-inline__item main-nav__item main-nav__item--with-icon"><a href="#">Github</a></li>
-                <li class="o-list-inline__item main-nav__item"><a href="#">Hire/Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
-</div>
-<script>
-    (function (d) {
-        var config = {
-                kitId: 'whi8fab',
-                scriptTimeout: 3000,
-                async: true
-            },
-            h = d.documentElement, t = setTimeout(function () {
-                h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-            }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a;
-        h.className += " wf-loading";
-        tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-            a = this.readyState;
-            if (f || a && a != "complete" && a != "loaded")return;
-            f = true;
-            clearTimeout(t);
-            try {
-                Typekit.load(config)
-            } catch (e) {
-            }
-        };
-        s.parentNode.insertBefore(tk, s)
-    })(document);
-</script>
+    <div id="container">
+
+    </div>
+    <script src="dist/js/bundle.js"></script>
+    <script>
+        (function (d) {
+            var config = {
+                    kitId: 'whi8fab',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement, t = setTimeout(function () {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function () {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded")return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {
+                }
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 </body>
 </html>
