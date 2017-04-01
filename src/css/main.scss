@@ -46,6 +46,8 @@
  * Images...............Base image styles.
  * Tables...............Simple table styles.
  *
+ * TRUMPS
+ *
  * OBJECTS
  * Wrapper..............Page constraint object.
  * Layout...............Generic layout module.
@@ -110,11 +112,12 @@
 
 // ELEMENTS
 @import "../../node_modules/inuitcss/elements/elements.page";
-@import "trumps/elements.headings";
 @import "../../node_modules/inuitcss/elements/elements.images";
 @import "../../node_modules/inuitcss/elements/elements.tables";
 
-
+// TRUMPS
+@import "trumps/elements.headings";
+@import "trumps/elements.page";
 
 // BASE
 @import "base/typography";
@@ -139,6 +142,7 @@
 @import "objects/icons";
 @import "objects/listsections";
 @import "objects/infobox";
+@import "objects/container";
 // COMPONENTS
 //
 // Build and include your project’s UI Compoments here.
@@ -147,6 +151,7 @@
 @import "components/components.mugshots";
 @import "components/components.lozenge";
 @import "components/components.sidebar";
+@import "components/components.footer";
 
 
 // UTILITIES

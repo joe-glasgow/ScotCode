@@ -5,9 +5,8 @@ class Portfolio extends Component {
     // TODO: factor out in portolio items [not DRY]
     render() {
         return (
-            <div className="u-1/1 u-padding-left-small u-padding-right-small">
+            <div className="u-1/1 u-padding-left-small u-padding-right-small u-margin-top-large">
                 <div className="u-1/1 o-layout o-layout--flush">
-                    <h2 class="u-margin-bottom-small">Recent Work</h2>
                     <div className="o-layout__item u-1/3@tablet u-1/3@desktop u-1/1@mobile u-margin-bottom-small">
                         <span className="o-block u-h3 u-margin-bottom-small">STV News</span>
                         <div

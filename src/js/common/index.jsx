@@ -11,7 +11,7 @@ export default class Main extends Component {
         return (
             <div>
                 <Router history={browserHistory}>
-                    <div className="o-wrapper u-margin-top-small o-wrapper--tiny" role="heading">
+                    <div className="o-wrapper u-padding-top-small" role="heading">
                         <Header/>
                         <HomeRoute/>
                         <AboutRoute/>

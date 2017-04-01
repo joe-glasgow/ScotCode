@@ -56,10 +56,10 @@ export default class Header extends Component {
                 <nav onClick={ this.handleMainNavClick.bind(this) } className={`${this.state.expandedClass} o-layout__item main-nav u-1/2@desktop u-1/2@mobile`}>
                     <ul className={`o-list-${this.state.BEMListClass} main-nav__container`}>
                         <li className={`o-list-${this.state.BEMListClass}__item main-nav__item`}><Link className="main-nav__link" exact activeClassName="active" to="/">Home</Link></li>
-                        <li className={`o-list-${this.state.BEMListClass}__item main-nav__item`}><Link className="main-nav__link" exact activeClassName="active" to="/about">About</Link></li>
+                        <li className={`o-list-${this.state.BEMListClass}__item main-nav__item`}><Link className="main-nav__link" exact activeClassName="active" to="/about/interests">About</Link></li>
                         <li className={`o-list-${this.state.BEMListClass}__item main-nav__item`}><Link className="main-nav__link" exact activeClassName="active" to="/portfolio">Portfolio</Link></li>
-                        <li className={`o-list-${this.state.BEMListClass}__item main-nav__item main-nav__item--with-icon`}><a className="main-nav__link" href="#">Github</a></li>
-                        <li className={`o-list-${this.state.BEMListClass}__item main-nav__item`}><a className="main-nav__link" href="#">Hire/Contact Me</a></li>
+                        <li className={`o-list-${this.state.BEMListClass}__item main-nav__item main-nav__item--with-icon`}><a className="main-nav__link" href="http://github.com/joe-glasgow/?tab=repositories" target="_blank">Github</a></li>
+                        <li className={`o-list-${this.state.BEMListClass}__item main-nav__item`}><a className="main-nav__link" href="mailto:web@devbyjoe.co.uk" target="_blank">Hire/Contact Me</a></li>
                     </ul>
                 </nav>
             </header>

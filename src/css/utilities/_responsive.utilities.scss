@@ -34,3 +34,23 @@
     text-align: inherit;
   }
 }
+
+.center-on-mobile--then-left {
+  text-align: center;
+  @include tablet {
+    text-align: left;
+  }
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.center-on-mobile--then-right{
+  text-align: center;
+  @include tablet {
+    text-align: right;
+  }
+  @include desktop {
+    text-align: right;
+  }
+}

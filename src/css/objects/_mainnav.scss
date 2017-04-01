@@ -43,8 +43,8 @@
     margin-right: 0.8em;
     line-height: 1em;
   }
-  a:hover {
-    text-shadow:0 0 0.08em $grey, 0 0 0.08em $grey, 0 0 0.08em $grey;
+  a:hover, .active {
+    text-shadow: 0 0 0.08em $grey, 0 0 0.08em $grey, 0 0 0.08em $grey;
   }
   &:last-of-type {
     a {
@@ -70,15 +70,16 @@
 /* Mobile Navigation Styles */
 
 .expanded.main-nav {
-    position: relative;
-    &:before {
-      right: 0;
-      top: -0.3em;
-      cursor: pointer;
-      content: "\e680";
-      @include inuit-font-size(32px);
-      z-index: 5;
-    }
+  position: relative;
+  z-index: 2;
+  &:before {
+    right: 0;
+    top: -0.3em;
+    cursor: pointer;
+    content: "\e680";
+    @include inuit-font-size(32px);
+    z-index: 5;
+  }
 }
 
 .expanded {
@@ -88,9 +89,9 @@
     position: absolute;
     right: 0;
     background: #fff;
-    -webkit-box-shadow: -6px 7px 11px -4px rgba(6,133,207,1);
-    -moz-box-shadow: -6px 7px 11px -4px rgba(6,133,207,1);
-    box-shadow: -6px 7px 11px -4px rgba(6,133,207,1);
+    -webkit-box-shadow: -6px 7px 11px -4px rgba(6, 133, 207, 1);
+    -moz-box-shadow: -6px 7px 11px -4px rgba(6, 133, 207, 1);
+    box-shadow: -6px 7px 11px -4px rgba(6, 133, 207, 1);
     padding: 0px 0.2em 0.2em;
     border-radius: $global-radius;
 

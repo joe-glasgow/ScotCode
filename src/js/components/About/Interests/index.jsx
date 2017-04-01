@@ -17,7 +17,7 @@ export default class Interests extends Component {
                             When I'm not coding I like to attend meetups, go to the gym, game on my PS4 or Switch and generally socialise!
                         </p>
                         <p>
-                            If you want to find out more or check my availability, please feel free to <a href="#">Contact me.</a>
+                            If you want to find out more or check my availability, please feel free to <a href="mailto:web@devbyjoe.co.uk" target="_blank">Contact me.</a>
                         </p>
                     </div>
                 </div>

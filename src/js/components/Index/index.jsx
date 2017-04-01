@@ -17,7 +17,6 @@ class Home extends Component {
                     <p className="fs-large">
                         I like code, gaming and 5 shot lattes.
                     </p>
-                    <a href="#">View Portfolio</a>
                 </div>
             </div>
         )
