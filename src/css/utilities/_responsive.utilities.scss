@@ -24,3 +24,13 @@
 .bold {
   font-weight: 600;
 }
+
+.center-on-mobile {
+  text-align: center;
+  @include tablet {
+    text-align: inherit;
+  }
+  @include desktop {
+    text-align: inherit;
+  }
+}

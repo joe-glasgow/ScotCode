@@ -1,26 +1,28 @@
+/* Responsive Navigation */
+
 .main-nav {
   position: relative;
   text-align: right;
-  :before {
+  &:before {
     position: absolute;
     width: 50px;
     height: 50px;
     top: 0;
     right: 5px;
-    background: #000;
-    content: '';
+    content: "\e636";
+    color: grey;
+    @include inuit-font-size(44px);
     cursor: pointer;
+    font-family: 'Pe-icon-7-stroke';
   }
   @include tablet {
-    :before {
-      width: 0px;
-      height: 0px;
+    &:before {
+      content: "";
     }
   }
   @include desktop {
-    :before {
-      width: 0px;
-      height: 0px;
+    &:before {
+      content: "";
     }
   }
 }
@@ -30,6 +32,7 @@
   position: relative;
   @include tablet {
     display: inline-block;
+    font-size: 0.9rem;
   }
   @include desktop {
     display: inline-block;
@@ -53,7 +56,7 @@
 .main-nav__item--with-icon {
   padding-left: 28px;
   position: relative;
-  :before {
+  &:before {
     content: url('../images/Github-Mark-64px.png');
     width: 25px;
     height: 25px;
@@ -61,5 +64,55 @@
     top: 0;
     left: 0;
     background: none;
+  }
+}
+
+/* Mobile Navigation Styles */
+
+.expanded.main-nav {
+    position: relative;
+    &:before {
+      right: 0;
+      top: -0.3em;
+      cursor: pointer;
+      content: "\e680";
+      @include inuit-font-size(32px);
+      z-index: 5;
+    }
+}
+
+.expanded {
+  // list container
+  .main-nav__container {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    background: #fff;
+    -webkit-box-shadow: -6px 7px 11px -4px rgba(6,133,207,1);
+    -moz-box-shadow: -6px 7px 11px -4px rgba(6,133,207,1);
+    box-shadow: -6px 7px 11px -4px rgba(6,133,207,1);
+    padding: 0px 0.2em 0.2em;
+    border-radius: $global-radius;
+
+  }
+  // list items
+  .main-nav__item {
+    display: block;
+    color: #fff;
+    padding: 0 0 0.5em;
+    text-align: left;
+  }
+
+  // links
+  a.main-nav__link {
+    text-align: center;
+    margin-right: 0.8em;
+  }
+  // with icon
+  .main-nav__item--with-icon {
+    &:before {
+      right: 0;
+      left: inherit;
+    }
   }
 }

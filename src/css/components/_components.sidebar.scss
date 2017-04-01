@@ -1,0 +1,19 @@
+.sidebar {
+  background: url('../images/reflection.png');
+  background-size: cover;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  @include tablet {
+    visibility: visible;
+    margin: auto;
+    width: 180px;
+    height: 360px;
+  }
+  @include desktop {
+    visibility: visible;
+    margin: auto;
+    width: 180px;
+    height: 360px;
+  }
+}

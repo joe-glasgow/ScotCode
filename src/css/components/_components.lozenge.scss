@@ -1,0 +1,70 @@
+.lozenge {
+  border-radius: $global-radius;
+  border: 1px solid $grey;
+  width: 225px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 25px;
+  :first-of-type {
+    margin-top: 0px;
+  }
+  // mobile first
+  @include tablet {
+    margin-right: 25px;
+    margin-top: 0px;
+    :last-of-type {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+  }
+  @include desktop {
+    margin-right: 25px;
+    margin-top: 0px;
+    :last-of-type {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+  }
+}
+
+.lozenge--link {
+
+}
+
+.lozenge--icon, .lozenge--text {
+}
+
+.lozenge--icon {
+  float: left;
+  padding: 0.15em 0.3em 0;
+  border: 1px solid $grey;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+.lozenge--text {
+  line-height: 50px;
+}
+
+.lozenge--link {
+  text-decoration: none;
+  color: $grey;
+  :visited, :active {
+    color: $grey;
+  }
+  &:hover {
+    .lozenge--icon {
+      color: #fff;
+      background: $blue;
+    }
+  }
+}
+
+.lozenge--link.active {
+  .lozenge--icon {
+    color: #fff;
+    background: $blue;
+  }
+}
+

@@ -136,12 +136,17 @@
 @import "../../node_modules/inuitcss/objects/objects.pack";
 @import "objects/header";
 @import "objects/mainnav";
+@import "objects/icons";
+@import "objects/listsections";
+@import "objects/infobox";
 // COMPONENTS
 //
 // Build and include your project’s UI Compoments here.
 @import "components/components.buttons";
 @import "components/components.logo";
 @import "components/components.mugshots";
+@import "components/components.lozenge";
+@import "components/components.sidebar";
 
 
 // UTILITIES

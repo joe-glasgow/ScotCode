@@ -1,27 +1,42 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, BrowserRouter as Router, browserHistory } from 'react-router-dom';
+import Skills from './Skills';
+import Interests from './Interests';
+import Courses from './Courses';
+
 import Lozenge from "../../elements/Lozenge";
 // Factor out into API call
 // TODO: Backend API in Node
 const Categories = [{
-        iconClass: "skillsClass",
-        text: "Skills"
+        iconClass: "pe-7s-tools",
+        text: "Skills",
+        url: "skills"
     }, {
-        iconClass: "coursesClass",
-        text: "Courses"
+        iconClass: "pe-7s-notebook",
+        text: "Courses",
+        url: "courses"
     }, {
-        iconClass: "interestsClass",
-        text: "Interests"
+        iconClass: "pe-7s-joy",
+        text: "Interests",
+        url: "interests"
     }];
 
 class About extends Component {
     render() {
+        // current URL
+        const url = this.props.match.url;
+
         return (
-            <div className="o-layout--center u-margin-top-huge">
-                <ul className="o-list-inline">
-                    {Categories.map((category, index) => (<Lozenge iconClass={category.iconClass} text={category.text} key={index}  />))}
-                </ul>
-            </div>
+            <Router basename="/" history={browserHistory}>
+                <div className="o-layout--center u-margin-top-large">
+                    <ul className="o-list-inline icon-list">
+                        {Categories.map((category, index) => (<Lozenge linkTo={`${url}/${category.url}`} iconClass={category.iconClass} text={category.text} key={index}  />))}
+                    </ul>
+                    <Route path="/about/skills" component={Skills}/>
+                    <Route path="/about/courses" component={Courses}/>
+                    <Route path="/about/interests" component={Interests}/>
+                </div>
+            </Router>
         );
     }
 }

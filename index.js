@@ -6,9 +6,9 @@ const app = express();
 // serve static assets normally
 app.use('/dist', express.static('dist'));
 // Handles all routes so you do not get a not found error
-app.get('*', function (request, response){
+app.get('/*', function (request, response){
     response.sendFile(path.join(__dirname, 'index.html'));
-})
+});
 
 app.listen(port)
 console.log("server started on port " + port)
