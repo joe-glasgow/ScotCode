@@ -1,0 +1,20 @@
+@import "../../../node_modules/inuitcss/elements/elements.headings";
+h1, h2, h3, h4, h5, h6 {
+  font-family: "myriad-pro", sans-serif !important;
+}
+/* mobile first */
+/* font styles for headings fs-h{n} */
+.fs-h1 {
+  @include inuit-font-size(22px);
+  font-weight: normal;
+  line-height: 1.4em !important;
+  @include desktop {
+    @include inuit-font-size(36px);
+    line-height: 0.8 !important;
+  }
+  @include tablet {
+    @include inuit-font-size(36px);
+    line-height: 0.8 !important;
+  }
+
+}

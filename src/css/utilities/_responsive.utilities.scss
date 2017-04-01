@@ -1,0 +1,56 @@
+/* show elements based on device */
+
+.hide-on-mobile {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: block;
+  }
+}
+
+.show-on-mobile {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+
+/* small re usable classes */
+.bold {
+  font-weight: 600;
+}
+
+.center-on-mobile {
+  text-align: center;
+  @include tablet {
+    text-align: inherit;
+  }
+  @include desktop {
+    text-align: inherit;
+  }
+}
+
+.center-on-mobile--then-left {
+  text-align: center;
+  @include tablet {
+    text-align: left;
+  }
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.center-on-mobile--then-right{
+  text-align: center;
+  @include tablet {
+    text-align: right;
+  }
+  @include desktop {
+    text-align: right;
+  }
+}

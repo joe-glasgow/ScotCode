@@ -1,0 +1,7 @@
+.icon-list__item--large {
+  @include inuit-font-size(40px);
+}
+
+.icon-list__item--medium {
+  @include inuit-font-size(22px);
+}

@@ -1,0 +1,27 @@
+/* Fonts */
+
+.wf-loading {
+  display: none;
+}
+
+html {
+  font-family: 'myriad-pro', 'sans-serif';
+  color: $grey;
+}
+
+/* stylised font */
+
+.fs-large {
+  @include inuit-font-size(20px);
+  font-weight: 700;
+  @include desktop {
+    @include inuit-font-size(36px);
+  }
+  @include tablet {
+    @include inuit-font-size(36px);
+  }
+}
+
+.fs-blue {
+  color: $blue;
+}

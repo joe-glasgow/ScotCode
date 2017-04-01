@@ -1,0 +1,35 @@
+.page-footer--dark {
+  background: $grey;
+  // because its the opposite
+  color: $bodyBackground;
+}
+
+.footer-icon {
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  display: block;
+  margin-left: 25px;
+}
+
+.footer-icon--twitter {
+  background-image: url("../images/twitterlogo.gif");
+}
+
+.footer-icon--linkedin {
+  background-image: url("../images/linkedinlogo.png");
+}
+
+.footer-font-icon {
+  margin-left: 25px;
+}
+
+.footer-contact {
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:visited {
+      color: #fff;
+    }
+  }
+}

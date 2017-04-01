@@ -1,0 +1,33 @@
+/* Logo */
+$logo: "../images/logo.png";
+/* Primary Logo */
+
+.logo {
+  display: inline-block;
+  /* default image for non-retina */
+  background-image: url($logo);
+  background-size: cover;
+}
+
+.logo--small {
+  width: 40px;
+  height: 35px;
+  @include desktop {
+    width: 80px;
+    height: 70px;
+  }
+  @include tablet {
+    width: 80px;
+    height: 70px;
+  }
+}
+
+.logo--medium {
+  width: 160px;
+  height: 140px;
+}
+
+.logo--large {
+  width: 240px;
+  height: 210px;
+}
