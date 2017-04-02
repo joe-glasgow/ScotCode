@@ -11,7 +11,7 @@ export default class Interests extends Component {
                         <h2 className="center-on-mobile">Hey there!</h2>
                         <p>You've probably guessed my name's Joe and I'm an experienced Web Developer from Glasgow, Scotland.</p>
                         <p>I'm a code enthusiast and love learning new things. I've worked for some high profile clients and some really low key ones too.
-                            Lots of the work I have done has been for Global or Internal projects so you can ask me about these - I'll stick the things that are public in my porfolio section!
+                            Lots of the work I have done has been for Global or Internal projects so you can ask me about these - I'll stick the things that are public in my portfolio section!
                         </p>
                         <p>
                             When I'm not coding I like to attend meetups, go to the gym, game on my PS4 or Switch and generally socialise!

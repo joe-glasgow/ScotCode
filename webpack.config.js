@@ -47,7 +47,7 @@ module.exports = [{
     },
     output: {
         filename: './dist/css/bundle.css',
-        publicPath: '../../'
+        publicPath: '/'
     },
     module: {
         rules: [
