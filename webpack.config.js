@@ -1,13 +1,13 @@
 const path = require('path');
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const extractCSS = new ExtractTextPlugin('./dist/css/bundle.css');
+const extractCSS = new ExtractTextPlugin('/css/bundle.css');
 const loaders = [
     {
-        loader: 'css-loader'
+        loader: 'css-loader?name=css/[name].[ext]'
     },
     {
-        loader: 'sass-loader'
+        loader: 'sass-loader?name=css/[name].[ext]'
     }
 ];
 // main app dir
@@ -18,8 +18,8 @@ module.exports = [{
     entry: './src/js/app.jsx',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist/js'),
-        publicPath: '../../'
+        path: `${path.resolve("./")}/dist/js`,
+        publicPath: '/dist/js/'
     },
     module: {
         loaders: [{
@@ -43,29 +43,30 @@ module.exports = [{
     // CSS [SASS and image, font laoders]
 }, {
     entry: {
-        css: './src/css/main.scss'
+        css: `${path.resolve('./src')}/css/main.scss`
     },
     output: {
-        filename: './dist/css/bundle.css',
-        publicPath: '/'
+        filename: 'bundle.css',
+        path: `${path.resolve("./")}/dist/`,
+        publicPath: '/dist/'
     },
     module: {
         rules: [
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
+                    fallback: 'style-loader?name=css/[name].[ext]',
                     //resolve-url-loader may be chained before sass-loader if necessary
                     use: loaders
                 })
             },
             {
                 test: /\.jpe?g$|\.gif$|\.png$/i,
-                use: "url-loader?limit=1024&name=dist/images/[hash].[ext]?[hash]"
+                use: "url-loader?limit=1024&name=images/[hash].[ext]?[hash]"
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=dist/fonts/[name].[ext]'
+                loader: 'file-loader?name=fonts/[name].[ext]'
             }
         ]
     },
