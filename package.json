@@ -13,11 +13,20 @@
   "author": "Joseph Morrison",
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.6.2",
+    "copy-webpack-plugin": "^4.0.1",
+    "ejs": "^2.5.6",
+    "ejs-compiled-loader": "^1.1.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "img-loader": "^2.0.0",
     "inuitcss": "^6.0.0-beta.4",
+    "node-noop": "^1.0.0",
+    "optimize-js-plugin": "0.0.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^4.0.0",
-    "react-router-dom": "^4.0.0"
+    "react-router-dom": "^4.0.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",

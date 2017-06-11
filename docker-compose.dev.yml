@@ -1,0 +1,15 @@
+version: "2"
+services:
+    app:
+        build:
+            context: .
+        container_name: scotcode_app
+        ports:
+            - 3000:3000
+            - 3001:3001
+        volumes:
+            - ./:/approot/
+        working_dir: /approot
+        environment:
+            NODE_ENV: 'development'
+        entrypoint: sh -cl 'npm install && npm run watch'
